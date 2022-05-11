@@ -1,0 +1,270 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- main-area -->
+        <main>
+
+            <!-- breadcrumb-area -->
+            <div class="breadcrumb-area breadcrumb-bg s-breadcrumb-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-content">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="dots"></li>
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">News & Media</li>
+                                        <li class="dots2"></li>
+                                    </ol>
+                                </nav>
+                                <h2>Latest news</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb-area-end -->
+
+            <!-- blog-area -->
+            <div class="blog-area blog-bg pt-120 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-2 order-lg-0">
+                            <aside class="blog-sidebar">
+                                <div class="widget mb-40">
+                                    <div class="single-sidebar search-sidebar-md">
+                                        <div class="sidebar-title mb-25">
+                                            <h3>Search</h3>
+                                        </div>
+                                        <div class="sidebar-form">
+                                            <form action="#">
+                                                <input type="text" placeholder="Search type...">
+                                                <button><i class="fas fa-search"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget mb-40">
+                                    <div class="single-sidebar white-bg">
+                                        <div class="sidebar-title mb-25">
+                                            <h3>Post Category</h3>
+                                        </div>
+                                        <div class="cat-list">
+                                            <ul>
+                                                <li><a href="#">Retail &amp; Consumer <span>(14)</span></a></li>
+                                                <li><a href="#">Sciences &amp; Healthcare <span>(09)</span></a></li>
+                                                <li><a href="#">Ocean Freight <span>(03)</span></a></li>
+                                                <li><a href="#">Electricity Freight <span>(02)</span></a></li>
+                                                <li><a href="#">Transportation <span>(07)</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget mb-40">
+                                    <div class="single-sidebar white-bg">
+                                        <div class="sidebar-title mb-25">
+                                            <h3>Recent Posts</h3>
+                                        </div>
+                                        <div class="rc-post">
+                                            <ul>
+                                                <li>
+                                                    <div class="rc-post-thumb">
+                                                        <a href="#"><img src="{% static 'web/img/blog/rc_post_thumb01.jpg' %}" alt="img"></a>
+                                                    </div>
+                                                    <div class="rc-post-content">
+                                                        <h5><a href="#">Express Manegment Effective</a></h5>
+                                                        <span>November 22, 2019</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rc-post-thumb">
+                                                        <a href="#"><img src="{% static 'web/img/blog/rc_post_thumb02.jpg' %}" alt="img"></a>
+                                                    </div>
+                                                    <div class="rc-post-content">
+                                                        <h5><a href="#">Customer Logisties Process Overall</a></h5>
+                                                        <span>November 22, 2019</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rc-post-thumb">
+                                                        <a href="#"><img src="{% static 'web/img/blog/rc_post_thumb03.jpg' %}" alt="img"></a>
+                                                    </div>
+                                                    <div class="rc-post-content">
+                                                        <h5><a href="#">Supply is warehouse Effective</a></h5>
+                                                        <span>November 22, 2019</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <div class="single-sidebar white-bg">
+                                        <div class="sidebar-title mb-25">
+                                            <h3>Tags Posts</h3>
+                                        </div>
+                                        <div class="tag-list">
+                                            <ul>
+                                                <li><a href="#">Air Freight</a></li>
+                                                <li><a href="#">Railway</a></li>
+                                                <li><a href="#">News</a></li>
+                                                <li><a href="#">Warehouse</a></li>
+                                                <li><a href="#">Was</a></li>
+                                                <li><a href="#">Logistic</a></li>
+                                                <li><a href="#">Requirement</a></li>
+                                                <li><a href="#">Process</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb02.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Air Flight</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">Supply Cargo Management</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb03.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Warehousing</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">Logistics Originated Military</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb04.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Warehousing</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">Overall Process of Managing</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb05.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Ocean Freight</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">Customer Requirement Timely</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb07.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Ocean Freight</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">Goal of Logistics Meet</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-blog-post s-single-blog-post mb-45">
+                                        <div class="blog-thumb">
+                                            <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb08.jpg' %}" alt="img"></a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <ul>
+                                                    <li><a href="#">Railway Freight</a></li>
+                                                    <li>10, May 2019</li>
+                                                </ul>
+                                            </div>
+                                            <h4><a href="blog-details.html">That Complicated Activity</a></h4>
+                                            <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                            amet, consectetur adipisicing.</p>
+                                            <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="pagination-wrap mt-30 text-center">
+                                        <nav>
+                                            <ul class="pagination">
+                                                <li class="page-item"><a href="#"><i class="fas fa-chevron-left"></i></a></li>
+                                                <li class="page-item"><a href="#">01</a></li>
+                                                <li class="page-item active"><a href="#">02</a></li>
+                                                <li class="page-item"><a href="#">03</a></li>
+                                                <li class="page-item"><a href="#">...</a></li>
+                                                <li class="page-item"><a href="#">10</a></li>
+                                                <li class="page-item"><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- blog-area-end -->
+
+        </main>
+        <!-- main-area-end -->
+
+
+{% endblock %}
+      
