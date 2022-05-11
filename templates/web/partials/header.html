@@ -53,16 +53,16 @@
                         <div class="main-menu">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li class="active"><a href="{% url 'web:index' %}">Home</a>
+                                    <li class="{% if is_index %} active {% endif %}"><a href="{% url 'web:index' %}">Home</a>
                                         <!-- <ul class="submenu">
                                             <li class="active"><a href="index.html">Home One</a></li>
                                             <li><a href="index-2.html">Home Two</a></li>
                                             <li><a href="index-3.html">Home Three</a></li>
                                         </ul> -->
                                     </li>
-                                    <li><a href="{% url 'web:service' %}">Service</a></li>
-                                    <li><a href="{% url 'web:product' %}">Product</a></li>
-                                    <li><a href="{% url 'web:updates' %}">Update</a></li>
+                                    <li class="{% if is_service %} active {% endif %}"><a href="{% url 'web:service' %}">Service</a></li>
+                                    <li class="{% if is_product %} active {% endif %}"><a href="{% url 'web:product' %}">Product</a></li>
+                                    <li class="{% if is_update %} active {% endif %}"><a href="{% url 'web:updates' %}">Update</a></li>
 
                                     <!-- <li><a href="#">Pages</a>
                                         <ul class="submenu">
@@ -85,16 +85,16 @@
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
                                     </li> -->
-                                    <li><a href="{% url 'web:contact' %}">Contact</a></li>
+                                    <li class="{% if is_contact %} active {% endif %}"><a href="{% url 'web:contact' %}">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="header-search">
+                        <!-- <div class="header-search">
                             <a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-magnifying-glass"></i></a>
                         </div>
                         <div class="header-btn">
                             <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="{% static 'web/img/icon/calculator-symbols.png' %}" alt="icon">Get Fare Rate</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-12">

@@ -31,6 +31,66 @@
             <section class="blog-area blog-bg pt-120 pb-120">
                 <div class="container">
                     <div class="row blog-active">
+                        {% for update in updates %}
+                        <div class="col-lg-4 col-md-6 grid-item">
+                            <div class="single-blog-post s-single-blog-post mb-45">
+                                <div class="blog-thumb">
+                                    <a href="{% url 'web:updatesDetails' update.slug %}"><img src="{{update.image.crop.403x288}}" alt="img"></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <!-- <li><a href="#">Warehousing</a></li> -->
+                                            <li>{{update.date|date:"d"}}, {{update.date|date:"M"}} {{update.date|date:"Y"}}</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="{% url 'web:updatesDetails' update.slug %}">{{update.title}}</a></h4>
+                                    <p>{{update.summary}}</p>
+                                    <a href="{% url 'web:updatesDetails' update.slug %}">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        {% comment %}
+                        <div class="col-lg-4 col-md-6 grid-item">
+                            <div class="single-blog-post s-single-blog-post mb-45">
+                                <div class="blog-thumb">
+                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb02.jpg' %}" alt="img"></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><a href="#">Air Flight</a></li>
+                                            <li>10, May 2019</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="blog-details.html">Supply Cargo Management</a></h4>
+                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                    amet, consectetur adipisicing.</p>
+                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 grid-item">
+                            <div class="single-blog-post s-single-blog-post mb-45">
+                                <div class="blog-thumb">
+                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb03.jpg' %}" alt="img"></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><a href="#">Warehousing</a></li>
+                                            <li>10, May 2019</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="blog-details.html">Logistics Originated Military</a></h4>
+                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
+                                    amet, consectetur adipisicing.</p>
+                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-6 grid-item">
                             <div class="single-blog-post s-single-blog-post mb-45">
                                 <div class="blog-thumb">
@@ -88,110 +148,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <blockquote class="blockquote-post">
-                                Storage good from point origin of consump
-                                <footer class="blockquote-footer">
-                                    <span>Frenk Smith</span> Founder ceo
-                                </footer>
-                            </blockquote>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <div class="single-blog-post s-single-blog-post mb-45">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb04.jpg' %}" alt="img"></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><a href="#">Warehousing</a></li>
-                                            <li>10, May 2019</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="blog-details.html">Overall Process of Managing</a></h4>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
-                                    amet, consectetur adipisicing.</p>
-                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <div class="single-blog-post s-single-blog-post mb-45">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb05.jpg' %}" alt="img"></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><a href="#">Ocean Freight</a></li>
-                                            <li>10, May 2019</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="blog-details.html">Customer Requirement Timely</a></h4>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
-                                    amet, consectetur adipisicing.</p>
-                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <div class="single-blog-post s-single-blog-post mb-45">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb06.jpg' %}" alt="img"></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><a href="#">Ocean Freight</a></li>
-                                            <li>10, May 2019</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="blog-details.html">General Business Sense</a></h4>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
-                                    amet, consectetur adipisicing.</p>
-                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <div class="single-blog-post s-single-blog-post mb-45">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb07.jpg' %}" alt="img"></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><a href="#">Ocean Freight</a></li>
-                                            <li>10, May 2019</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="blog-details.html">Goal of Logistics Meet</a></h4>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
-                                    amet, consectetur adipisicing.</p>
-                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grid-item">
-                            <div class="single-blog-post s-single-blog-post mb-45">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb08.jpg' %}" alt="img"></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><a href="#">Railway Freight</a></li>
-                                            <li>10, May 2019</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="blog-details.html">That Complicated Activity</a></h4>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small cargo service dolor sit
-                                    amet, consectetur adipisicing.</p>
-                                    <a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        {% endcomment %}
                     </div>
+
+
+                    {% comment %}
                     <div class="row">
                         <div class="col-12">
                             <div class="pagination-wrap mt-30 text-center">
@@ -209,6 +170,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endcomment %}
                 </div>
             </section>
             <!-- blog-area-end -->

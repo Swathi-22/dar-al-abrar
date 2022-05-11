@@ -335,6 +335,26 @@ blockquote.classic-blockquote-post::after {
 	right: 100%;
 	left: auto;
 }
+.ctn-preloader .animation-preloader .txt-loading {
+	font: bold 5em "Poppins", sans-serif;
+	text-align: center;
+	font-size: 85px !important;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.ctn-preloader .animation-preloader .spinner {
+	-webkit-animation: spinner 1s infinite linear;
+	animation: spinner 1s infinite linear;
+	border-radius: 50%;
+	border: 3px solid rgba(0, 0, 0, 0.2);
+	border-top-color: #FF5B5B;
+	height: 100px;
+	margin: 0 auto 3.5em auto;
+	width: 100px;
+	margin-top: 50px;
+}
 
 }
 
@@ -632,6 +652,25 @@ blockquote.blockquote-post::before {
 	padding-right: 0;
 	padding-top: 115px;
 }
+.ctn-preloader .animation-preloader .txt-loading {
+	font: bold 5em "Poppins", sans-serif;
+	text-align: center;
+	font-size: 65px !important;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.ctn-preloader .animation-preloader .spinner {
+	-webkit-animation: spinner 1s infinite linear;
+	animation: spinner 1s infinite linear;
+	border-radius: 50%;
+	border: 3px solid rgba(0, 0, 0, 0.2);
+	border-top-color: #FF5B5B;
+	height: 80px;
+	margin: 0 auto 3.5em auto;
+	width: 80px;
+  }
 
 }
 
@@ -807,9 +846,18 @@ blockquote.blockquote-post::before {
 	margin-bottom: 15px;
 }
 #scrollUp {
-	right: 30px;
-	bottom: 50px;
+    background: #FF4800;
+    height: 35px;
+    width: 35px;
+    right: 5px;
+    bottom: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 38px;
 }
+
 .transparent-header {
 	background: transparent;
 }
