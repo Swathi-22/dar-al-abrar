@@ -12,4 +12,5 @@ urlpatterns = [
     path('blog/', views.updates,name='updates'),
     path('blog-details/<str:slug>/', views.updatesDetails,name='updatesDetails'),
     path('contact/', views.contact,name='contact'),
+    path('SaveContactForm/', views.SaveContactForm,name='SaveContactForm')
 ]

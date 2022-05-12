@@ -42,22 +42,28 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="support-form text-center">
-                                <form action="#">
+                                <form id="form">
                                     <div class="row">
+                                        {% csrf_token %}
                                         <div class="col-md-6">
-                                            <input type="text" placeholder="First Name *">
+                                            <!-- <input type="text" placeholder="Your Name" name="name"> -->
+                                            {{forms.name}}
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" placeholder="Last Name *">
+                                            <!-- <input type="text" placeholder="Your Phone" name="phone"> -->
+                                            {{forms.phone}}
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="email" placeholder="Your E-mail *">
+                                            <!-- <input type="text" placeholder="Your E-mail" name="email"> -->
+                                            {{forms.email}}
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="email" placeholder="Website">
+                                            <!-- <input type="text" placeholder="Subject" name="subject"> -->
+                                            {{forms.subject}}
                                         </div>
                                     </div>
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                    <!-- <textarea name="message" id="message" placeholder="Message"></textarea> -->
+                                    {{forms.message}}
                                     <button class="btn red-btn">Submit Now</button>
                                 </form>
                             </div>
@@ -123,11 +129,15 @@
             <!-- contact-area-end -->
 
             <!-- contact-map -->
-            <div id="contact-page-map"></div>
+            <div id="contact-page-map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1QlqZ-rT0_7n6LT3mbDDRxsyxass&hl=en_US&ehbc=2E312F" width="100%" height="480"></iframe>  
+            </div>
             <!-- contact-map-end -->
 
         </main>
         <!-- main-area-end -->
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 {% endblock %}
 

@@ -1,5 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Update
+from .forms import ContactForm
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -48,10 +50,19 @@ def updatesDetails(request,slug):
 
 
 def contact(request):
+    forms=ContactForm(request.POST or None)
     context ={
         "is_contact" : True,
+        'forms':forms
     }
     return render(request,'web/contact.html',context)
 
 
 
+def SaveContactForm(request):
+  
+    forms=ContactForm(request.POST or None)
+    if request.method=='POST':
+        if forms.is_valid():
+            forms.save()
+    return JsonResponse({'title':'name'})
