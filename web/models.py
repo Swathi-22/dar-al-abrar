@@ -1,3 +1,4 @@
+
 from django.db import models
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from tinymce.models import HTMLField
@@ -28,3 +29,17 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Category(models.Model):
+    title=models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title
+        
+
+
+class Product(models.Model):
+    category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    title=models.CharField(max_length=100)
+    

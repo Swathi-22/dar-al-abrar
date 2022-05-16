@@ -1242,7 +1242,7 @@ label {
 	bottom: 15px;
 }
 .breadcrumb-content {
-	padding-top: 220px;
+	padding-top: 0px;
 }
 
 
@@ -4220,7 +4220,7 @@ blockquote.blockquote-post::after {
 	box-shadow: none;
 }
 .blog-classic-post .blog-content {
-	padding: 0;
+	padding: 0px 100px;
 }
 .blog-classic-tag ul li {
 	display: inline-block;
@@ -4967,4 +4967,13 @@ blockquote.classic-blockquote-post::after {
 }
 .col-padding{
 	padding: 10px 0px;
+}
+.select-padding{
+	padding: 0px 50px;
+}
+.inputbox-pad{
+	padding-top: 29px;
+}
+.updeimgpad{
+	padding: 0px 100px;
 }

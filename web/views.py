@@ -5,8 +5,10 @@ from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
+    updates=Update.objects.all().order_by('-id')[:3]
     context ={
         "is_index" : True,
+        'updates':updates
     }
     return render(request,'web/index.html',context)
 

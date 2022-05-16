@@ -361,6 +361,12 @@ blockquote.classic-blockquote-post::after {
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+.blog-classic-post .blog-content {
+	padding: 0;
+}
+.updeimgpad{
+	padding: 0;
+}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -677,6 +683,12 @@ blockquote.blockquote-post::before {
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
+.blog-classic-post .blog-content {
+	padding: 0;
+}
+.updeimgpad{
+	padding: 0;
+}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -1296,6 +1308,12 @@ blockquote::before {
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+.blog-classic-post .blog-content {
+	padding: 0;
+}
+.updeimgpad{
+	padding: 0;
+}
 .slider-form form {
 	display: flex;
 	justify-content: center;
@@ -1486,5 +1504,8 @@ blockquote.classic-blockquote-post::after {
 	display: inline-block;
 	width: calc(100% / 2);
 }
+
+}
+@media only screen and (min-width: 320px) and (max-width: 575px) {
 
 }
