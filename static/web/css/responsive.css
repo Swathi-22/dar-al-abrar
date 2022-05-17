@@ -349,7 +349,7 @@ blockquote.classic-blockquote-post::after {
 	animation: spinner 1s infinite linear;
 	border-radius: 50%;
 	border: 3px solid rgba(0, 0, 0, 0.2);
-	border-top-color: #FF5B5B;
+	border-top-color: #1b6672;
 	height: 100px;
 	margin: 0 auto 3.5em auto;
 	width: 100px;
@@ -672,7 +672,7 @@ blockquote.blockquote-post::before {
 	animation: spinner 1s infinite linear;
 	border-radius: 50%;
 	border: 3px solid rgba(0, 0, 0, 0.2);
-	border-top-color: #FF5B5B;
+	border-top-color: #1b6672;
 	height: 80px;
 	margin: 0 auto 3.5em auto;
 	width: 80px;
