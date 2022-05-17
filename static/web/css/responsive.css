@@ -377,8 +377,27 @@ blockquote.classic-blockquote-post::after {
 .header-btn {
 	display: none;
 }
+.mean-container a.meanmenu-reveal {
+    border: 2px solid #1b6672;
+    color: #1b6672;
+    cursor: pointer;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1px;
+    font-weight: 700;
+    height: 22px;
+    line-height: 55px;
+    margin-top: -46px;
+    padding: 8px 9px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 22px;
+    margin-top: -60px;
+}
 .main-header {
-	padding: 25px 0 10px;
+	padding: 5px 0 0px;
 	background: #fff;
 }
 .main-header.sticky-menu {
@@ -683,6 +702,9 @@ blockquote.blockquote-post::before {
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
+.item-aligns{
+	text-align: start;
+}
 .blog-classic-post .blog-content {
 	padding: 0;
 }
@@ -697,7 +719,7 @@ blockquote.blockquote-post::before {
 	display: block;
 }
 .main-header {
-	padding: 25px 0 10px;
+	padding: 5px 0 0px;
 	background: #fff;
 }
 .main-header.sticky-menu {
@@ -705,10 +727,10 @@ blockquote.blockquote-post::before {
 	background: #fff;
 }
 .mobile-logo {
-	width: 165px;
+	width: 60px;
 }
 .mean-container a.meanmenu-reveal {
-	margin-top: -39px;
+	margin-top: -45px;
 }
 .slider-content h2 {
 	font-size: 50px;

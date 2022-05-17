@@ -4983,3 +4983,6 @@ blockquote.classic-blockquote-post::after {
 .logo-size{
 	width: 25%;
 }
+.item-aligns{
+	text-align: center;
+}
