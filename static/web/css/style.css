@@ -204,10 +204,10 @@ label {
 /* button style */
 .btn {
 	-moz-user-select: none;
-	background: #fff8d4	 none repeat scroll 0 0;
+	background: #1b6672 none repeat scroll 0 0;
 	border: medium none;
 	border-radius: 0;
-	color: #1b6672;
+	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
@@ -370,7 +370,7 @@ label {
 }
 .main-header {
 	padding: 8px 0;
-	background: #fff8d4;
+	background: #fff;
 }
 .menu-area {
 	display: -webkit-box;
@@ -510,7 +510,7 @@ label {
 	top: 0;
 	width: 100%;
 	z-index: 99;
-	background: #fff8d4;
+	background: #fff;
 	-webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
