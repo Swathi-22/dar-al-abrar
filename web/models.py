@@ -39,7 +39,21 @@ class Category(models.Model):
         
 
 
+class Countries(models.Model):
+    name=models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = ("Countries")
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
-    title=models.CharField(max_length=100)
+    countries=models.TextField()
+    quantity=models.IntegerField()
+    price=models.IntegerField()
     
+    def __str__(self):
+        return self.category
