@@ -25,67 +25,89 @@
                 </div>
             </div>
         </div>
+       
     </div>
     <!-- breadcrumb-area-end -->
 
     <!-- blog-area -->
     <div class="blog-area blog-bg pt-120 pb-120">
         <div class="container">
-            <div class="row">
-                {% comment %}
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                    <div class="blog-thumb">
-                        <a href="blog-details.html"><img src="{% static 'web/img/blog/s_blog_thumb02.jpg' %}"
-                                alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 col-12">
-                    <h4><a href="blog-details.html">Supply Cargo Management</a></h4>
-                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of small
-                        cargo service dolor sit
-                        amet, consectetur adipisicing.</p>
-                </div>
-                {% endcomment %}
 
-                <div class="col-lg-3">
-                    <div>
-                        <label for=""> Product</label>
-                    </div>
-                    <select class="form-select select-padding" aria-label="Default select example">
-                        <option selected>Product</option>
-                        <option value="1">Sugar</option>
-                        <option value="2">Maida</option>
-                        <option value="3">Oil</option>
-                        <option value="3">Cashewnut</option>
-                    </select>
-                </div>
-
-                <div class="col-lg-3">
-                    <div>
-                        <label for=""> Country</label>
-                    </div>
-                    <select class="form-select select-padding" aria-label="Default select example">
-                        <option selected>Country</option>
-                        <option value="1">China</option>
-                        <option value="2">India</option>
-                        <option value="3">United States</option>
-                        <option value="3">Indonesia</option>
-                    </select>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class="inputbox-pad">
-                        <input type="text" placeholder="Quantity">
+            <div class="border-box">
+                <div class="row text-center ">
+                    {% csrf_token %}
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div>
+                            <label class="label-color"> Product</label>
+                        </div>
+                        <select class="form-select select-padding " id="category" aria-label="Default select example">
+                            <!-- <option selected>Product</option> -->
+                            {% for categories in category %}
+                            <option value="{{categories.id}}">{{categories.title}}</option>
+                            {% endfor %}
+                        </select>
                     </div>
 
-                </div>
-                <div class="col-lg-3">
-                    <div class="inputbox-pad">
-                        <input type="text" placeholder="&#8377; 100 ">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div>
+                            <label class="label-color"> Country</label>
+                        </div>
+                        <select class="form-select select-padding " id='country' aria-label="Default select example">
+                            <!-- <option selected>Country</option> -->
+                            <!-- <option value="1">China</option>
+                            <option value="2">India</option>
+                            <option value="3">United States</option>
+                            <option value="3">Indonesia</option> -->
+                        </select>
                     </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div>
+                            <label class="label-color">Quantity in TON</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Quantity in TON"  class="input-radius inputlength text-center">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-12 col-12">
+                        <div>
+                            <label class="label-color">Price</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="&#8377; 100" class="inputlength input-radius text-center">
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-12 col-sm-12 ">
+                        <div class="addbtn-alignment">
+                            <button class="add-button">ADD</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
+        <div class="container table-pad">
+            <table class="table table-color">
+                <thead>
+                  <tr>        
+                    <th>Product</th>
+                    <th>Country</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+       
     </div>
     <!-- blog-area-end -->
 

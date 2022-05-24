@@ -50,10 +50,14 @@ class Countries(models.Model):
 
 
 class Product(models.Model):
-    category=models.ForeignKey(Category,on_delete=models.CASCADE)
-    countries=models.TextField()
-    quantity=models.IntegerField()
+    category=models.OneToOneField(Category,on_delete=models.CASCADE)
+    countries=models.ManyToManyField(Countries)
+    quantity_in_TON=models.IntegerField()
     price=models.IntegerField()
-    
+
+    def get_countries(self):
+        return ",".join ([str(p) for p in self.countries.all()])
+
     def __str__(self):
-        return self.category
+        return f"category = {self.category}, countries = {self.Countries.all()}"
+   

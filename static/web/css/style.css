@@ -4969,10 +4969,12 @@ blockquote.classic-blockquote-post::after {
 	padding: 10px 0px;
 }
 .select-padding{
-	padding: 0px 50px;
-}
-.inputbox-pad{
-	padding-top: 29px;
+	width: 72%;
+	background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #1b6672;
+	padding: 7px 0px;
 }
 .updeimgpad{
 	padding: 0px 100px;
@@ -4985,4 +4987,51 @@ blockquote.classic-blockquote-post::after {
 }
 .item-aligns{
 	text-align: center;
+}
+.border-box{
+	border: 1px solid #fff;
+	background-color: #1b6672;
+	border-radius: 50px;
+	width: 100%;
+	padding: 29px 0px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.inputlength{
+	width: 70%;
+}
+.label-color{
+	color: #fff;
+}
+.add-button{
+	border: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    color: #1b6672;
+	font-weight: 500;
+    border-radius: 12px;
+    padding: 5px 12px;
+}
+.addbtn-alignment {
+    text-align: end;
+    padding-right: 46px;
+    padding-top: 28px;
+}
+.input-radius{
+	border-radius: 10px;
+	border: 1px solid #1b6672;
+	padding: 7px 0px;
+}
+.table-pad{
+	padding-top: 55px;
+}
+.table-color{
+	background-color: #1b6672;
+}
+.table thead th {
+	color: #fff;
+}
+.table tbody td{
+	color:#fff;
+}
+::placeholder{
+	color: #000000;
 }

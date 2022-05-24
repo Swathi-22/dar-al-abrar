@@ -1,7 +1,10 @@
+from unicodedata import category
 from django.shortcuts import render,get_object_or_404
-from .models import Update
+from .models import Category, Product, Update
 from .forms import ContactForm
 from django.http import JsonResponse
+from django.core import serializers
+from django.forms.models import model_to_dict
 
 # Create your views here.
 def index(request):
@@ -23,8 +26,11 @@ def service(request):
 
 
 def product(request):
+    category=Category.objects.all()
     context ={
         "is_product" : True,
+        'category':category
+
     }
     return render(request,'web/product.html',context)
 
@@ -68,3 +74,12 @@ def SaveContactForm(request):
         if forms.is_valid():
             forms.save()
     return JsonResponse({'title':'name'})
+
+
+def get_product(request):
+    categoryId = request.POST['category']
+    category=Product.objects.get(category=categoryId)
+    countries = category.countries.all().values('name')
+    return JsonResponse({'data':list(countries)})
+      
+    

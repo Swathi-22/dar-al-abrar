@@ -361,6 +361,29 @@ blockquote.classic-blockquote-post::after {
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+.addbtn-alignment {
+	text-align: center;
+	padding-right: 0px;
+	padding-top: 15px;
+}
+.add-button {
+	border: 1px solid antiquewhite;
+	background-color: antiquewhite;
+	color: #1b6672;
+	font-weight: 500;
+	border-radius: 12px;
+	padding: 2px 35px;
+}
+.inputlength {
+	width: 92%;
+}
+.select-padding{
+	width: 93%;
+	background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #1b6672;
+}
 .blog-classic-post .blog-content {
 	padding: 0;
 }
@@ -690,7 +713,7 @@ blockquote.blockquote-post::before {
 	-webkit-animation: spinner 1s infinite linear;
 	animation: spinner 1s infinite linear;
 	border-radius: 50%;
-	border: 3px solid rgba(0, 0, 0, 0.2);
+	/* border: 3px solid rgba(0, 0, 0, 0.2); */
 	border-top-color: #1b6672;
 	height: 80px;
 	margin: 0 auto 3.5em auto;
@@ -1330,6 +1353,7 @@ blockquote::before {
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
 .blog-classic-post .blog-content {
 	padding: 0;
 }
@@ -1529,5 +1553,27 @@ blockquote.classic-blockquote-post::after {
 
 }
 @media only screen and (min-width: 320px) and (max-width: 575px) {
-
+	.inputlength {
+		width: 57%;
+	}
+	.select-padding {
+		width: 58%;
+		background-color: #fff;
+		text-align: center;
+		border-radius: 10px;
+		border: 1px solid #1b6672;
+	}
+	.addbtn-alignment {
+		text-align: center;
+		padding-right: 0px;
+		padding-top: 15px;
+	}
+	.add-button {
+		border: 1px solid antiquewhite;
+		background-color: antiquewhite;
+		color: #1b6672;
+		font-weight: 500;
+		border-radius: 12px;
+		padding: 2px 35px;
+	}
 }
