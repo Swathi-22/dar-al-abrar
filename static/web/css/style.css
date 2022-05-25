@@ -5035,3 +5035,17 @@ blockquote.classic-blockquote-post::after {
 ::placeholder{
 	color: #000000;
 }
+.submit-btn{
+	border: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    color: #1b6672;
+    padding: 5px 10px;
+	font-weight: 700;
+	border-radius: 5px;
+}
+.total-class{
+	color: #000000	;
+}
+.form-padding{
+	padding-bottom: 10px;
+}

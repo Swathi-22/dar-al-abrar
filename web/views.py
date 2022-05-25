@@ -78,8 +78,27 @@ def SaveContactForm(request):
 
 def get_product(request):
     categoryId = request.POST['category']
-    category=Product.objects.get(category=categoryId)
-    countries = category.countries.all().values('name')
-    return JsonResponse({'data':list(countries)})
+    categoryname=Category.objects.get(id=categoryId)
+    category=Product.objects.filter(category=categoryId)
+    country=[]
+    for i in category:
+        data = {'name':i.countries.name}
+        country.append(data)
+    return JsonResponse({'data':country,'category':categoryname.title})
       
-    
+
+
+def get_price(request):
+    categoryId=request.POST['category']
+    countryId=request.POST['country']
+    country=Product.objects.get(category=categoryId,countries__name=countryId)
+    return JsonResponse({'price':country.price_for_one_TON})
+
+
+
+def get_totalPrice(request):
+    quantity=request.POST['quantity']
+    price=request.POST['price']
+    print(price)
+    total_price=int(quantity)*int(price)
+    return JsonResponse({'totalPrice':total_price})

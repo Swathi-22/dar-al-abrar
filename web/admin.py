@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Update,Contact,Countries,Product,Category
 from django.utils.safestring import mark_safe
+from django.urls import reverse
+from django.utils.html import format_html
 
 # Register your models here.
 
@@ -23,14 +25,7 @@ class CountriesAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):   
-    list_display = ( 'category','get_countries','pricelist',)
-    def get_queryset(self, request):
-        self.full_path = request.get_full_path()
-        return super().get_queryset(request)
-    def pricelist(self,obj):
-        a = '''<a href=" url 'preview-pdf' id={self.id} , name={fdg}>"hji</a>'''
-        return mark_safe(a)
-
+    list_display = ( 'category','get_countries',)
     
 
 @admin.register(Category)

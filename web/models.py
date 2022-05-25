@@ -50,14 +50,15 @@ class Countries(models.Model):
 
 
 class Product(models.Model):
-    category=models.OneToOneField(Category,on_delete=models.CASCADE)
-    countries=models.ManyToManyField(Countries)
-    quantity_in_TON=models.IntegerField()
-    price=models.IntegerField()
+    category=models.ForeignKey(Category,on_delete=models.CASCADE)
+    countries=models.ForeignKey(Countries,on_delete=models.CASCADE)
+    price_for_one_TON=models.IntegerField()
+
+    class Meta:
+        unique_together = ('category','countries')
 
     def get_countries(self):
         return ",".join ([str(p) for p in self.countries.all()])
 
-    def __str__(self):
-        return f"category = {self.category}, countries = {self.Countries.all()}"
+    
    

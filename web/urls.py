@@ -13,5 +13,7 @@ urlpatterns = [
     path('blog-details/<str:slug>/', views.updatesDetails,name='updatesDetails'),
     path('contact/', views.contact,name='contact'),
     path('SaveContactForm/', views.SaveContactForm,name='SaveContactForm'),
-    path('get-countries/',views.get_product,name="get_product")
+    path('get-countries/',views.get_product,name="get_product"),
+    path('get-price/',views.get_price,name="get_price"),
+    path('get-totalprice/',views.get_totalPrice,name='get_totalPrice')
 ]

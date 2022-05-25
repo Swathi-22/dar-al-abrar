@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
     <!-- breadcrumb-area-end -->
 
@@ -34,80 +34,131 @@
         <div class="container">
 
             <div class="border-box">
-                <div class="row text-center ">
-                    {% csrf_token %}
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                        <div>
-                            <label class="label-color"> Product</label>
+                <form id="forms">
+                    <div class="row text-center ">
+                        {% csrf_token %}
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                            <div>
+                                <label class="label-color"> Product</label>
+                            </div>
+                            <select class="form-select select-padding " id="category" name="category"
+                                aria-label="Default select example" required>
+                                <option selected disabled>--select--</option>
+                                {% for categories in category %}
+                                <option value="{{categories.id}}">{{categories.title}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
-                        <select class="form-select select-padding " id="category" aria-label="Default select example">
-                            <!-- <option selected>Product</option> -->
-                            {% for categories in category %}
-                            <option value="{{categories.id}}">{{categories.title}}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                        <div>
-                            <label class="label-color"> Country</label>
-                        </div>
-                        <select class="form-select select-padding " id='country' aria-label="Default select example">
-                            <!-- <option selected>Country</option> -->
-                            <!-- <option value="1">China</option>
-                            <option value="2">India</option>
-                            <option value="3">United States</option>
-                            <option value="3">Indonesia</option> -->
-                        </select>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                        <div>
-                            <label class="label-color">Quantity in TON</label>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Quantity in TON"  class="input-radius inputlength text-center">
+                        <input type="text" id="prdctName" name="prdctName" hidden>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                            <div>
+                                <label class="label-color"> Country</label>
+                            </div>
+                            <select class="form-select select-padding " id='country' name="country"
+                                aria-label="Default select example" required>
+                                <!-- <option selected>Country</option> -->
+                                <!-- <option value="1">China</option>
+                                <option value="2">India</option>
+                                <option value="3">United States</option>
+                                <option value="3">Indonesia</option> -->
+                            </select>
                         </div>
 
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-12 col-12">
-                        <div>
-                            <label class="label-color">Price</label>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                            <div>
+                                <label class="label-color">Quantity in TON</label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" id="quantity" name="quantity"
+                                    class="input-radius inputlength text-center" required>
+                            </div>
+
                         </div>
-                        <div>
-                            <input type="text" placeholder="&#8377; 100" class="inputlength input-radius text-center">
+                        <div class="col-lg-2 col-md-3 col-sm-12 col-12">
+                            <div>
+                                <label class="label-color">Price</label>
+                            </div>
+                            <div>
+                                <input type="number" id="price" name="price"
+                                    class="inputlength input-radius text-center" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-1 col-md-12 col-sm-12 ">
-                        <div class="addbtn-alignment">
-                            <button class="add-button">ADD</button>
+                        <input type="number" id="productprice" class="inputlength input-radius text-center" hidden>
+
+                        <div class="col-lg-1 col-md-12 col-sm-12 ">
+                            <div class="addbtn-alignment">
+                                <button type="submit" class="add-button">ADD</button>
+                            </div>
                         </div>
+
                     </div>
-                    
-                </div>
+                </form>
+
             </div>
         </div>
         <div class="container table-pad">
-            <table class="table table-color">
+            <table class="table table-color" id="table">
                 <thead>
-                  <tr>        
-                    <th>Product</th>
-                    <th>Country</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                  </tr>
+                    <tr>
+                        <th>Product</th>
+                        <th>Country</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
+
                 </tbody>
             </table>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-right">
+                <label class="total-class">Total:</label>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                <button class="submit-btn" type="button" data-toggle="modal" data-target="#exampleModal">Submit</button>
+            </div>
+
+
+
+            <form id="whatsapp-form">
+                <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group form-padding">
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        placeholder="Your Name">
+                                </div>
+    
+                                <div class="form-group form-padding">
+                                    <input type="text" name="cmpnyname" id="cmpnyname" class="form-control" placeholder="Company Name">
+                                </div>
+                                <div class="form-group form-padding">
+                                    <textarea name="cmpnyadrs" id="cmpnyadrs" cols="30" rows="3" class="form-control" placeholder="Company Address"></textarea>
+                                </div>
+                                <div class="form-group form-padding">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="Email id">
+                                </div>
+                                <div class="form-group form-padding">
+                                    <input type="text" name="mob" id="mob" class="form-control" placeholder="Mobile Number">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="submit-btn">Send</button>
+                                <button type="submit" class="submit-btn" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
         </div>
-       
+
     </div>
     <!-- blog-area-end -->
 
