@@ -1,3 +1,5 @@
+totalSum = [];
+
 $('#category').change(function(){
     var categoryId=$(this).val()
     var data = {
@@ -67,8 +69,9 @@ $('#quantity').change(function(){
             $("#price").val(response.totalPrice)
             
         }
+       
     })
-
+    
 })
 
 var data =[]
@@ -91,8 +94,15 @@ $('#forms').submit(function(e){
     row.append($("<td>" + dataObj.country + "</td>"));
     row.append($("<td>" + dataObj.quantity + "</td>"));
     row.append($("<td>" + dataObj.price + "</td>"));
+    totalSum.push (dataObj.price)
+    console.log(totalSum)
+    var total = 0;
+    for (var i = 0; i < totalSum.length; i++) {
+    total += totalSum[i] << 0;
+    }
+    console.log(total)
+    $("#total").html(total)
     return false;
-
 });
 
 
@@ -100,39 +110,43 @@ $('#forms').submit(function(e){
 
 $('#whatsapp-form').submit(function () {
 
-    var phone = '+919539438918';
     var name = $('#name').val()
     var companyName = $('#cmpnyname').val()
     var companyAddr = $('#cmpnyadrs').val()
     var email = $('#email').val()
     var mobile = $('#mob').val()
-    
-
-    const text = [
-        'Name:' + name,
-        'Company Name: ' + companyName,
-        'Company Address: ' + companyAddr,
-        'Email Id:' + email,
-        'Mobile:' + mobile,
-
-    ].join("\n")
-    // console.log(data)
-    // var product = []
-    // for(var i=0; i<data.length; i++){
-    //     product.push([
-    //         'product:' + data[i].prdctName,
-    //     ]).join("\n") 
-    // }
-   
-
-    console.log(data)
-    // change to what you want sep to be
-    
-    const action = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text)+"?text="+encodeURIComponent(product);
-    window.location.href = action;
-
+    var total = 0;
+    for (var i = 0; i < totalSum.length; i++) {
+    total += totalSum[i] << 0;
+    }
+    details = {
+        'name':name,
+        'companyname' :companyName,
+        'companyaddress':companyAddr,
+        'email':email,
+        'total':total,
+        'mobile':mobile,
+        'data':data,
+        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+    }
+    console.log(details)
+    details['data'] = JSON.stringify(details['data'])
+    $.ajax({
+        url:'/send-whatsapp/',
+        type:'POST', 
+        data:details,
+        success:function(response){
+            window.location.href=response['link']
+            console.log(response)
+           
+            
+        }
+    })
     return false
 })
+
+
+
 
 
 

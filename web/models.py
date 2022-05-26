@@ -60,5 +60,40 @@ class Product(models.Model):
     def get_countries(self):
         return ",".join ([str(p) for p in self.countries.all()])
 
+
+
+# class Order(models.Model):
+#     ORDER_CHOICES = (('ACCEPTED','ACCEPTED'),('ORDER PROCESSING','ORDER PROCESSING'),('SHIPMENT PENDING','SHIPMENT PENDING'),('ESTIMATED DELIVERY','ESTIMATED DELIVERY'))
+#     track_number = models.CharField(max_length=128)
+#     customer_name = models.CharField(max_length=128)
+#     email = models.EmailField('customer email',blank=True, null=True)
+#     phone = models.CharField(max_length=128)
+#     from_address = models.TextField()
+#     to_address = models.TextField()
+#     status = models.CharField(max_length=128,default=True,choices=ORDER_CHOICES)
+
+#     def get_order_update(self):
+#         if OrderUpdate.objects.filter(order=self).exists():
+#             return OrderUpdate.objects.filter(order=self)
+#         else:
+#             return None
+
+#     def str(self):
+#         return str(self.track_number)
+
+
+# class OrderUpdate(models.Model):
+#     order = models.ForeignKey(Order,on_delete = models.CASCADE)
+#     location = models.CharField(max_length=128) 
+#     comments = models.CharField(max_length=128)
+#     timestamp = models.DateTimeField()
+#     order_icon = models.ForeignKey(Icon,on_delete = models.CASCADE,blank=True,null=True)
+
+#     def str(self):
+#         return str(self.order)
+
+
+
+
     
    

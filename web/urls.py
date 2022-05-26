@@ -15,5 +15,7 @@ urlpatterns = [
     path('SaveContactForm/', views.SaveContactForm,name='SaveContactForm'),
     path('get-countries/',views.get_product,name="get_product"),
     path('get-price/',views.get_price,name="get_price"),
-    path('get-totalprice/',views.get_totalPrice,name='get_totalPrice')
+    path('get-totalprice/',views.get_totalPrice,name='get_totalPrice'),
+    path('send-whatsapp/',views.sendWhatsapp,name='sendWhatsapp'),
+    path('order-tracking/',views.tracking,name='tracking')
 ]

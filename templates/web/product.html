@@ -112,7 +112,7 @@
             </table>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-right">
-                <label class="total-class">Total:</label>
+                <label class="total-class" >Total : <span id="total" class="total-class"></span></label>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                 <button class="submit-btn" type="button" data-toggle="modal" data-target="#exampleModal">Submit</button>
@@ -121,6 +121,7 @@
 
 
             <form id="whatsapp-form">
+                {% csrf_token %}
                 <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -150,7 +151,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="submit-btn">Send</button>
-                                <button type="submit" class="submit-btn" data-dismiss="modal">Close</button>
+                                <button type="button" class="submit-btn" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

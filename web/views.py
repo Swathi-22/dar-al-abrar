@@ -1,3 +1,5 @@
+from email import message
+from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render,get_object_or_404
 from .models import Category, Product, Update
@@ -5,6 +7,7 @@ from .forms import ContactForm
 from django.http import JsonResponse
 from django.core import serializers
 from django.forms.models import model_to_dict
+import json
 
 # Create your views here.
 def index(request):
@@ -102,3 +105,34 @@ def get_totalPrice(request):
     print(price)
     total_price=int(quantity)*int(price)
     return JsonResponse({'totalPrice':total_price})
+
+
+def sendWhatsapp(request):
+    print(request.POST)
+    data = json.loads(request.POST['data'])
+    name= request.POST['name']
+    total= request.POST['total']
+    companyname= request.POST['companyname']
+    companyaddress= request.POST['companyaddress']
+    email= request.POST['email']
+    mobile= request.POST['mobile']
+    messagestring = 'https://wa.me/9539438918?text=Name :'+name+'%0aCompany Name :'+companyname+'%0aCompany Address :'+companyaddress+'%0aEmail Id:'+email+'%0aMobile Number:'+mobile+\
+                "%0a-----Order Details------"
+
+    for i in data:
+        messagestring +="%0aProduct:"+str(i['prdctName'])+"%0aCountry:"+str(i['country'])+"%0aQuantity:"+str(i['quantity'])+"%0aPrice:"+str(i['price'])+"%0a-----------------------------"
+    messagestring+="%0a-----------------------------%0a\
+    Grand Total :"+str(total)+"%0a--------------------------------"
+    
+    return JsonResponse({'link':messagestring})
+
+
+
+def tracking(request):
+    context = {
+        
+    }
+    return render(request,'web/tracking.html',context)
+
+   
+       
