@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Update,Contact,Countries,Product,Category
+from .models import Update,Contact,Countries,Product,Category,Order,OrderUpdate,Icon
 from django.utils.safestring import mark_safe
 from django.urls import reverse
 from django.utils.html import format_html
@@ -31,3 +31,21 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ( 'title',)
+    
+
+
+@admin.register(Icon)
+class IconAdmin(admin.ModelAdmin):
+    list_display = ( 'title',)
+
+
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ( 'track_number',)
+
+
+
+@admin.register(OrderUpdate)
+class OrderUpdateAdmin(admin.ModelAdmin):
+    list_display = ( 'order',)

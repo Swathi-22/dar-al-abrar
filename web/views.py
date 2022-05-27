@@ -2,7 +2,7 @@ from email import message
 from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render,get_object_or_404
-from .models import Category, Product, Update
+from .models import Category, Product, Update,Order,OrderUpdate
 from .forms import ContactForm
 from django.http import JsonResponse
 from django.core import serializers
@@ -129,8 +129,23 @@ def sendWhatsapp(request):
 
 
 def tracking(request):
+    if request.method=='GET':
+        code =request.GET.get('code',None)
+        if Order.objects.filter(track_number=code).exists():
+            order=Order.objects.filter(track_number__icontains=code).first()
+        else:
+            order = None
     context = {
-        
+        'order':order
+    }
+    return render(request,'web/tracking.html',context)
+
+
+
+def live_tracking(request,slug):
+    order=get_object_or_404(Order,track_number=slug)
+    context ={
+        'order':order
     }
     return render(request,'web/tracking.html',context)
 
