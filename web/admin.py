@@ -40,9 +40,13 @@ class IconAdmin(admin.ModelAdmin):
 
 
 
+class OrderUpdateInline(admin.TabularInline):
+    model = OrderUpdate
+
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ( 'track_number',)
+    inlines = [ OrderUpdateInline]
 
 
 

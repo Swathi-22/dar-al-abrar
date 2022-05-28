@@ -17,5 +17,6 @@ urlpatterns = [
     path('get-price/',views.get_price,name="get_price"),
     path('get-totalprice/',views.get_totalPrice,name='get_totalPrice'),
     path('send-whatsapp/',views.sendWhatsapp,name='sendWhatsapp'),
-    path('order-tracking/',views.tracking,name='tracking')
+    path('order-tracking/',views.tracking,name='tracking'),
+    path('order-tracking/<str:slug>/',views.live_tracking, name='live_tracking'),
 ]

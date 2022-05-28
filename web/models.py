@@ -69,7 +69,7 @@ class Order(models.Model):
     phone = models.CharField(max_length=128)
     from_address = models.TextField()
     to_address = models.TextField()
-    status = models.CharField(max_length=128,default=True)
+    status = models.CharField(max_length=128,default=True,choices=ORDER_CHOICES)
 
 
     def get_order_update(self):

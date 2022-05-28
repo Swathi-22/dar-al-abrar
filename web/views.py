@@ -138,7 +138,7 @@ def tracking(request):
     context = {
         'order':order
     }
-    return render(request,'web/tracking.html',context)
+    return render(request,'web/track.html',context)
 
 
 
@@ -147,7 +147,7 @@ def live_tracking(request,slug):
     context ={
         'order':order
     }
-    return render(request,'web/tracking.html',context)
+    return render(request,'web/track.html',context)
 
    
        

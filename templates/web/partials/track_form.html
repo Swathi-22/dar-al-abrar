@@ -1,0 +1,77 @@
+     <!-- section begin -->
+     <section id="section-tracking">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <form class="cta-form wow fadeIn" autocomplete="on" data-wow-delay="0s" data-wow-duration="1s" method="GET" action="{% url 'web:tracking' %}">
+                        <input type="text" name="code" value="" placeholder="Insert tracking number here...">
+                        <button type="submit">TRACK IT</button>
+                        <div class="clearfix"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        {% if order %}
+        <div id="section-tracking-result" class="light-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="divider-double"></div>
+                        <div class="text-center">
+                            <h3><span class="grey">Product ID:</span> {{order.track_number}}</h3>
+                        </div>
+                        <div class="divider-double"></div>
+                        <div class="wrapper-line padding40 rounded10">
+                            <ul class="progress">
+                                <li class="{% if order.status == 'ACCEPTED' %} active {% endif %}"><a href="#">Accepted</a></li>
+                                <li class="{% if order.status == 'ORDER PROCESSING' %} active {% endif %}"><a href="#">Order Processing</a></li>
+                                <li class="{% if order.status == 'SHIPMENT PENDING' %} active {% endif %}"><a href="#">In Transit</a></li>
+                                <li class="{% if order.status == 'ESTIMATED DELIVERY' %} active {% endif %}"><a href="">Delivered</a></li>
+                            </ul>
+                            <div class="divider-double"></div>
+                            <ul class="timeline custom-tl">
+                                {% for order_update in order.get_order_update %}
+                                <li class="timeline-inverted">
+                                    <div class="timeline-date wow zoomIn" data-wow-delay=".2s">
+                                        {{order_update.timestamp|date:'M j,Y'}}
+                                        <span>{{order_update.timestamp|date:'h:i A'}} IST</span>
+                                    </div>
+                                    <div class="timeline-badge success">
+
+                                        <i class=" wow zoomIn">
+                                            <img src="{{order_update.order_icon.icon.crop.24x20}}" alt="">
+                                        </i>
+                                    </div>
+                                    <div class="timeline-panel wow fadeInRight" data-wow-delay=".6s">
+                                        <div class="timeline-body">
+                                            {{order_update.comments}}
+                                            <span class="location">{{order_update.location}}
+                                                <!-- <a href="#" class="popup-gmaps">view on map</a> -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div id="section-tracking-result-message" class="light-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="divider-double"></div>
+                        <div class="text-center">
+                            <h3 style="color:#1b6672;">Tracking Number Not Found</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </section>
+    <!-- section close -->
