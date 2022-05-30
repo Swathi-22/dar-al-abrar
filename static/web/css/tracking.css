@@ -977,7 +977,7 @@ ELEMENTS
 /* button
 /*------------------------------ */
 	.btn {
-	padding: 3px 20px 3px 20px;
+	padding: 21px 20px 21px 20px;
 	}
 
 	.btn-custom {
@@ -1333,7 +1333,7 @@ ELEMENTS
 	.f_box span {
 	display: block;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	font-weight: normal;
 	margin-top: 10px;
 	}
@@ -2046,7 +2046,7 @@ ELEMENTS
 
 	ul.progress li {
 		float: left;
-		line-height: 20px;
+		line-height: 18px;
 		height: 20px;
 		min-width: 25%;
 		position: relative;
@@ -4763,6 +4763,6 @@ background: url(../img/loader.gif) center no-repeat #fff;
 		height: 20px;
 		min-width: 25%;
 		position: relative;
-		font-size: 6+.3px;
+		font-size: 6.3px;
 	}
 }

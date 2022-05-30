@@ -1334,7 +1334,7 @@ label {
 	padding: 16px 30px;
 	font-size: 12px;
 	font-weight: 600;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	color: #1b6672;
 }
 .slider-form input::placeholder {

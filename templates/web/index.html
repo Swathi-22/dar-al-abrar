@@ -19,13 +19,13 @@
                                         <h2 data-animation="fadeInUpS" data-delay=".3s">GLOBAL EXPORTS</h2>
                                         <p data-animation="fadeInUpS" data-delay=".6s">Dar AL Abrar is a leading exporting company that delivers food products across the world.</p>
                                         <div class="slider-form" data-animation="fadeInUpS" data-delay=".9s">
-                                            <form action="{%  url 'web:tracking' %}">
-                                                <input type="text" placeholder="Tracking id">
+                                            <form action="{%  url 'web:tracking'  %}" method="GET">
+                                                <input type="text" name="code" placeholder="Tracking id">
                                                 <button class="btn">Tracking</button>
                                             </form>
                                         </div>
                                     </div>
-                                </div>
+                                </div>. 
                             </div>
                         </div>
                     </div>
@@ -832,4 +832,20 @@
 
 
 {% endblock %}
-     
+
+{% block javascript %}
+<script>
+  var url = new URL(window.location.href);
+  var code = url.searchParams.get("code");
+  console.log(code);
+  elm = document.getElementById("section-tracking-result-message");
+  if (code) {
+    elm.classList.remove("d-none");
+    elm.classList.add("d-block");
+    console.log(code);
+  } else {
+    elm.classList.remove("d-block");
+    elm.classList.add("d-none");
+  }
+</script>
+{% endblock %}
