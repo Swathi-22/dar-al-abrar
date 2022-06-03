@@ -1,86 +1,70 @@
 {% load static %}
-
-<!-- header-start -->
 <header>
-
-    <div class="header-top-wrap purple-bg d-none d-md-block ">
-        
-            <div class="container-fluid header-container-p">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-7 col-md-6">
-                        <div class="header-contact">
-                            <ul>
-                                <li><i class="fas fa-headphones"></i>Call us +654 3048 9658</li>
-                                <li><i class="far fa-envelope"></i><a
-                                        href="https://themebeyond.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="83d0f7e2f1f7e2f0e8c3eaede5ecade0ecee">[email&#160;protected]</a>
-                                </li>
-                                <li><i class="fas fa-map-marker"></i>W84 wokin Street Park</li>
-                            </ul>
-                        </div>
+    <div class="header-top-wrap purple-bg d-none d-md-block">
+        <div class="container-fluid header-container-p">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 col-md-6">
+                    <div class="header-contact">
+                        <ul>
+                            <li><i class="fas fa-headphones"></i>Call us +654 3048 9658</li>
+                            <li><i class="far fa-envelope"></i><a href="https://themebeyond.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83d0f7e2f1f7e2f0e8c3eaede5ecade0ecee">[email&#160;protected]</a></li>
+                            <li><i class="fas fa-map-marker"></i>W84 wokin Street Park</li>
+                        </ul>
                     </div>
-                    <div class="col-xl-6 col-lg-5 col-md-6">
-                        <div class="header-top-right d-flex justify-content-end align-items-center">
-                            <div class="header-country">
-                                <form action="#">
-                                    <select name="name" class="selected">
-                                        <option value="">New York</option>
-                                        <option value="">Washington</option>
-                                        <option value="">Lake</option>
-                                        <option value="">Seventh</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div class="header-social">
-                                <ul>
-                                    <li>Follow us :</li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-md-6">
+                    <div class="header-top-right d-flex justify-content-end align-items-center">
+                        <div class="header-country">
+                            <form action="#">
+                                <select name="name" class="selected">
+                                    <option value="">New York</option>
+                                    <option value="">Washington</option>
+                                    <option value="">Lake</option>
+                                    <option value="">Seventh</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="header-social">
+                            <ul>
+                                <li>Follow us :</li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
     </div>
-
     <div id="header-sticky" class="main-header">
         <div class="container-fluid header-container-p">
             <div class="row align-items-center">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="logo">
-                        <a href="{% url 'web:index' %}"><img src="{% static 'web/img/logo/dar al abrar logo.svg' %}"
-                                class="mobile-logo logo-size" alt="Logo"></a>
+                        <a href="index.html"><img src="img/logo/logo.png" class="mobile-logo" alt="Logo"></a>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-6  d-md-block">
+                <div class="col-lg-9 col-md-6 d-none d-md-block">
                     <div class="menu-area">
                         <div class="main-menu">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li class="{% if is_index %} active {% endif %}"><a
-                                            href="{% url 'web:index' %}">Home</a>
-                                        <!-- <ul class="submenu">
+                                    <li class="active"><a href="index.html">Home</a>
+                                        <ul class="submenu">
                                             <li class="active"><a href="index.html">Home One</a></li>
                                             <li><a href="index-2.html">Home Two</a></li>
                                             <li><a href="index-3.html">Home Three</a></li>
-                                        </ul> -->
+                                        </ul>
                                     </li>
-                                    <li class="{% if is_service %} active {% endif %}"><a
-                                            href="{% url 'web:service' %}">Service</a></li>
-                                    <li class="{% if is_product %} active {% endif %}"><a
-                                            href="{% url 'web:product' %}">Product</a></li>
-                                    <li class="{% if is_update %} active {% endif %}"><a
-                                            href="{% url 'web:updates' %}">Update</a></li>
-
-                                    <!-- <li><a href="#">Pages</a>
+                                    <li><a href="about-us.html">Company</a></li>
+                                    <li><a href="tracking.html">Tracking</a></li>
+                                    <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="#">Services</a>
                                                 <ul class="submenu">
-                                                    <li><a href="service.html">Services Air</a></li>
+                                                    <li><a href="service-air.html">Services Air</a></li>
                                                     <li><a href="service-Railway.html">Services Railway</a></li>
                                                     <li><a href="service-door-to-door.html">Services Door to Door</a></li>
                                                     <li><a href="service-warehouse.html">Services warehouse</a></li>
@@ -93,21 +77,20 @@
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-classic.html">Blog Classic</a></li>
-                                            <li><a href="product.html">Blog With Sidebar</a></li>
+                                            <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
-                                    </li> -->
-                                    <li class="{% if is_contact %} active {% endif %}"><a
-                                            href="{% url 'web:contact' %}">Contact</a></li>
+                                    </li>
+                                    <li><a href="support.html">Support</a></li>
                                 </ul>
                             </nav>
                         </div>
-                        <!-- <div class="header-search">
+                        <div class="header-search">
                             <a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-magnifying-glass"></i></a>
-                        </div>-->
-                        <!-- <div class="header-btn">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="{% static 'web/img/icon/calculator-symbols.png' %}" alt="icon">Get Fare Rate</a>
-                        </div>  -->
+                        </div>
+                        <div class="header-btn">
+                            <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="img/icon/calculator-symbols.png" alt="icon">Get Fare Rate</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">
@@ -152,14 +135,11 @@
                                                 <div class="shipping-address-form">
                                                     <div class="shipping-country-box form-group">
                                                         <label for="from-country">from country</label>
-                                                        <input type="text" required="required" id="from-country"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="from-country" placeholder="Select Your Destination">
                                                     </div>
                                                     <div class="shipping-address-box form-group">
                                                         <label for="from-country-location">add your location</label>
-                                                        <input type="text" required="required"
-                                                            id="from-country-location"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="from-country-location" placeholder="Select Your Destination">
                                                     </div>
                                                 </div>
                                             </li>
@@ -170,13 +150,11 @@
                                                 <div class="shipping-address-form">
                                                     <div class="shipping-country-box form-group">
                                                         <label for="to-country">TO country</label>
-                                                        <input type="text" required="required" id="to-country"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="to-country" placeholder="Select Your Destination">
                                                     </div>
                                                     <div class="shipping-address-box form-group">
                                                         <label for="to-country-location">add your location</label>
-                                                        <input type="text" required="required" id="to-country-location"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="to-country-location" placeholder="Select Your Destination">
                                                     </div>
                                                 </div>
                                             </li>
@@ -184,16 +162,12 @@
                                     </div>
                                     <div class="modal-shipping-more-list">
                                         <ul>
-                                            <li><a href="#"><i class="flaticon-credit-card"></i> Don't have an account?
-                                                    No problem Pay by credit card or cash.</a></li>
-                                            <li><a href="#"><i class="flaticon-sings"></i> Get a quick quote and start
-                                                    shipping</a></li>
-                                            <li><a href="#"><i class="flaticon-track"></i> Consult your packaging and
-                                                    delivery options</a></li>
+                                            <li><a href="#"><i class="flaticon-credit-card"></i> Don't have an account? No problem Pay by credit card or cash.</a></li>
+                                            <li><a href="#"><i class="flaticon-sings"></i> Get a quick quote and start shipping</a></li>
+                                            <li><a href="#"><i class="flaticon-track"></i> Consult your packaging and delivery options</a></li>
                                         </ul>
                                     </div>
-                                    <button class="btn f-right nextBtn-2 btn-success" type="button">one more
-                                        step</button>
+                                    <button class="btn f-right nextBtn-2 btn-success" type="button">one more step</button>
                                 </div>
                             </div>
                             <div class="single-setup" id="step-2">
@@ -253,17 +227,12 @@
                                             </div>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" required="required" class="custom-control-input"
-                                                id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Logistics is
-                                                generally the detailed organization and implementation of a complex
-                                                operation. In a general business sense, logistics is the management of
-                                                the flow of things between the point of origin and the point</label>
+                                            <input type="checkbox" required="required" class="custom-control-input" id="customControlInline">
+                                            <label class="custom-control-label" for="customControlInline">Logistics is generally the detailed organization and implementation of a complex operation. In a general business sense, logistics is the management of the flow of things between the point of origin and the point</label>
                                         </div>
                                     </div>
                                     <button class="btn f-left prevBtn-2 btn-success" type="button">Previous</button>
-                                    <button class="btn f-right nextBtn-2 btn-success" type="button"><span>$19.00</span>
-                                        Booking</button>
+                                    <button class="btn f-right nextBtn-2 btn-success" type="button"><span>$19.00</span> Booking</button>
                                 </div>
                             </div>
                             <div class="single-setup" id="step-3">
@@ -286,9 +255,9 @@
                                             <div class="tracking-quots-board">
                                                 <label>your happiness quotes</label>
                                                 <div class="tracking-quots-board-info">
-                                                    <img src="{% static 'web/img/bg/board_bg.jpg" alt="img">
+                                                    <img src="img/bg/board_bg.jpg" alt="img">
                                                     <h5>On Board Your Products. Now Product is
-                                                        Malaysia Ocean</h5>
+                                                    Malaysia Ocean</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,4 +274,3 @@
         </div>
     </div>
 </header>
-<!-- header-start-end -->

@@ -335,61 +335,12 @@ blockquote.classic-blockquote-post::after {
 	right: 100%;
 	left: auto;
 }
-.ctn-preloader .animation-preloader .txt-loading {
-	font: bold 5em "Poppins", sans-serif;
-	text-align: center;
-	font-size: 85px !important;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.ctn-preloader .animation-preloader .spinner {
-	-webkit-animation: spinner 1s infinite linear;
-	animation: spinner 1s infinite linear;
-	border-radius: 50%;
-	border: 3px solid rgba(0, 0, 0, 0.2);
-	border-top-color: #1b6672;
-	height: 100px;
-	margin: 0 auto 3.5em auto;
-	width: 100px;
-	margin-top: 50px;
-}
 
 }
 
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
-.addbtn-alignment {
-	text-align: center;
-	padding-right: 0px;
-	padding-top: 15px;
-}
-.add-button {
-	border: 1px solid antiquewhite;
-	background-color: antiquewhite;
-	color: #1b6672;
-	font-weight: 500;
-	border-radius: 12px;
-	padding: 2px 35px;
-}
-.inputlength {
-	width: 92%;
-}
-.select-padding{
-	width: 93%;
-	background-color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #1b6672;
-}
-.blog-classic-post .blog-content {
-	padding: 0;
-}
-.updeimgpad{
-	padding: 0;
-}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -400,27 +351,8 @@ blockquote.classic-blockquote-post::after {
 .header-btn {
 	display: none;
 }
-.mean-container a.meanmenu-reveal {
-    border: 2px solid #1b6672;
-    color: #1b6672;
-    cursor: pointer;
-    display: block;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 1px;
-    font-weight: 700;
-    height: 22px;
-    line-height: 55px;
-    margin-top: -46px;
-    padding: 8px 9px;
-    position: absolute;
-    right: 0;
-    text-decoration: none;
-    top: 0;
-    width: 22px;
-    margin-top: -60px;
-}
 .main-header {
-	padding: 5px 0 0px;
+	padding: 25px 0 10px;
 	background: #fff;
 }
 .main-header.sticky-menu {
@@ -700,40 +632,12 @@ blockquote.blockquote-post::before {
 	padding-right: 0;
 	padding-top: 115px;
 }
-.ctn-preloader .animation-preloader .txt-loading {
-	font: bold 5em "Poppins", sans-serif;
-	text-align: center;
-	font-size: 65px !important;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.ctn-preloader .animation-preloader .spinner {
-	-webkit-animation: spinner 1s infinite linear;
-	animation: spinner 1s infinite linear;
-	border-radius: 50%;
-	/* border: 3px solid rgba(0, 0, 0, 0.2); */
-	border-top-color: #1b6672;
-	height: 80px;
-	margin: 0 auto 3.5em auto;
-	width: 80px;
-  }
 
 }
 
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
-.item-aligns{
-	text-align: start;
-}
-.blog-classic-post .blog-content {
-	padding: 0;
-}
-.updeimgpad{
-	padding: 0;
-}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -742,7 +646,7 @@ blockquote.blockquote-post::before {
 	display: block;
 }
 .main-header {
-	padding: 5px 0 0px;
+	padding: 25px 0 10px;
 	background: #fff;
 }
 .main-header.sticky-menu {
@@ -750,10 +654,10 @@ blockquote.blockquote-post::before {
 	background: #fff;
 }
 .mobile-logo {
-	width: 60px;
+	width: 165px;
 }
 .mean-container a.meanmenu-reveal {
-	margin-top: -45px;
+	margin-top: -39px;
 }
 .slider-content h2 {
 	font-size: 50px;
@@ -903,18 +807,9 @@ blockquote.blockquote-post::before {
 	margin-bottom: 15px;
 }
 #scrollUp {
-    background: #FF4800;
-    height: 35px;
-    width: 35px;
-    right: 5px;
-    bottom: 5px;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 16px;
-    line-height: 38px;
+	right: 30px;
+	bottom: 50px;
 }
-
 .transparent-header {
 	background: transparent;
 }
@@ -1353,13 +1248,6 @@ blockquote::before {
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-
-.blog-classic-post .blog-content {
-	padding: 0;
-}
-.updeimgpad{
-	padding: 0;
-}
 .slider-form form {
 	display: flex;
 	justify-content: center;
@@ -1551,57 +1439,4 @@ blockquote.classic-blockquote-post::after {
 	width: calc(100% / 2);
 }
 
-}
-@media only screen and (min-width: 320px) and (max-width: 575px) {
-	.inputlength {
-		width: 57%;
-	}
-	.select-padding {
-		width: 58%;
-		background-color: #fff;
-		text-align: center;
-		border-radius: 10px;
-		border: 1px solid #1b6672;
-	}
-	.addbtn-alignment {
-		text-align: center;
-		padding-right: 0px;
-		padding-top: 15px;
-	}
-	.add-button {
-		border: 1px solid antiquewhite;
-		background-color: antiquewhite;
-		color: #1b6672;
-		font-weight: 500;
-		border-radius: 12px;
-		padding: 2px 35px;
-	}
-	.ctn-preloader .animation-preloader .txt-loading {
-		font: bold 5em "Poppins", sans-serif;
-		text-align: center;
-		font-size: 85px !important;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-	.ctn-preloader .animation-preloader .spinner {
-		-webkit-animation: spinner 1s infinite linear;
-		animation: spinner 1s infinite linear;
-		border-radius: 50%;
-		border: 3px solid rgba(0, 0, 0, 0.2);
-		border-top-color: #1b6672;
-		height: 100px;
-		margin: 0 auto 3.5em auto;
-		width: 100px;
-		margin-top: 50px;
-	}
-	
-}
-
-@media (max-width: 767px) {
-	.main-header {
-		padding: 25px 0 10px;
-		background: #fff;
-	}
 }

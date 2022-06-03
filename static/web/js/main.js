@@ -38,7 +38,7 @@ $(window).on('scroll', function () {
 	} else {
 		$("#header-sticky").addClass("sticky-menu");
 	}
-});
+});   
 
 $(function () {
 	$('a.icon-scroll').on('click', function (event) {
