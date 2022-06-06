@@ -2,7 +2,7 @@
 
 <!-- header-start -->
 <header>
-
+    {% comment %}
     <div class="header-top-wrap purple-bg d-none d-md-block ">
         
             <div class="container-fluid header-container-p">
@@ -46,6 +46,8 @@
             </div>
         
     </div>
+    {% endcomment %}
+   
 
     <div id="header-sticky" class="main-header">
         <div class="container-fluid header-container-p">
@@ -110,8 +112,10 @@
                         </div>  -->
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="mobile-menu"></div>
+                <div class="col-12 ">
+                    <div class="mobile-menu">
+                     
+                    </div>
                 </div>
             </div>
             <!-- Modal Search -->
@@ -125,8 +129,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
+             <!-- Modal -->
+             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content fare-rate-modal">
                         <ul class="nav nav-tabs setup-panel">
@@ -152,14 +156,11 @@
                                                 <div class="shipping-address-form">
                                                     <div class="shipping-country-box form-group">
                                                         <label for="from-country">from country</label>
-                                                        <input type="text" required="required" id="from-country"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="from-country" placeholder="Select Your Destination">
                                                     </div>
                                                     <div class="shipping-address-box form-group">
                                                         <label for="from-country-location">add your location</label>
-                                                        <input type="text" required="required"
-                                                            id="from-country-location"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="from-country-location" placeholder="Select Your Destination">
                                                     </div>
                                                 </div>
                                             </li>
@@ -170,13 +171,11 @@
                                                 <div class="shipping-address-form">
                                                     <div class="shipping-country-box form-group">
                                                         <label for="to-country">TO country</label>
-                                                        <input type="text" required="required" id="to-country"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="to-country" placeholder="Select Your Destination">
                                                     </div>
                                                     <div class="shipping-address-box form-group">
                                                         <label for="to-country-location">add your location</label>
-                                                        <input type="text" required="required" id="to-country-location"
-                                                            placeholder="Select Your Destination">
+                                                        <input type="text" required="required" id="to-country-location" placeholder="Select Your Destination">
                                                     </div>
                                                 </div>
                                             </li>
@@ -184,16 +183,12 @@
                                     </div>
                                     <div class="modal-shipping-more-list">
                                         <ul>
-                                            <li><a href="#"><i class="flaticon-credit-card"></i> Don't have an account?
-                                                    No problem Pay by credit card or cash.</a></li>
-                                            <li><a href="#"><i class="flaticon-sings"></i> Get a quick quote and start
-                                                    shipping</a></li>
-                                            <li><a href="#"><i class="flaticon-track"></i> Consult your packaging and
-                                                    delivery options</a></li>
+                                            <li><a href="#"><i class="flaticon-credit-card"></i> Don't have an account? No problem Pay by credit card or cash.</a></li>
+                                            <li><a href="#"><i class="flaticon-sings"></i> Get a quick quote and start shipping</a></li>
+                                            <li><a href="#"><i class="flaticon-track"></i> Consult your packaging and delivery options</a></li>
                                         </ul>
                                     </div>
-                                    <button class="btn f-right nextBtn-2 btn-success" type="button">one more
-                                        step</button>
+                                    <button class="btn f-right nextBtn-2 btn-success" type="button">one more step</button>
                                 </div>
                             </div>
                             <div class="single-setup" id="step-2">
@@ -253,17 +248,12 @@
                                             </div>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" required="required" class="custom-control-input"
-                                                id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Logistics is
-                                                generally the detailed organization and implementation of a complex
-                                                operation. In a general business sense, logistics is the management of
-                                                the flow of things between the point of origin and the point</label>
-                                        </div>
+                                            <input type="checkbox" required="required" class="custom-control-input" id="customControlInline">
+                                            <label class="custom-control-label" for="customControlInline">Logistics is generally the detailed organization and implementation of a complex operation. In a general business sense, logistics is the management of the flow of things between the point of origin and the point</label>
+                                        </div>mean-bar
                                     </div>
                                     <button class="btn f-left prevBtn-2 btn-success" type="button">Previous</button>
-                                    <button class="btn f-right nextBtn-2 btn-success" type="button"><span>$19.00</span>
-                                        Booking</button>
+                                    <button class="btn f-right nextBtn-2 btn-success" type="button"><span>$19.00</span> Booking</button>
                                 </div>
                             </div>
                             <div class="single-setup" id="step-3">
@@ -286,9 +276,9 @@
                                             <div class="tracking-quots-board">
                                                 <label>your happiness quotes</label>
                                                 <div class="tracking-quots-board-info">
-                                                    <img src="{% static 'web/img/bg/board_bg.jpg" alt="img">
+                                                    <img src="img/bg/board_bg.jpg" alt="img">
                                                     <h5>On Board Your Products. Now Product is
-                                                        Malaysia Ocean</h5>
+                                                    Malaysia Ocean</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,7 +292,10 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </header>
 <!-- header-start-end -->
+
+

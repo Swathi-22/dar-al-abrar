@@ -18,6 +18,13 @@
 
 /* Normal desktop :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
+	.padding40 {
+		padding: 40px;
+		margin-bottom: 16px;
+	}
+	.logo-size{
+		width: 27%;
+	}
 .header-container-p {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -70,6 +77,14 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
+	.icon-size{
+		width: 11%;
+		padding-bottom: 24px;
+	}
+.padding40 {
+	padding: 40px;
+	margin-bottom: 16px;
+}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -189,8 +204,9 @@
 	display: none;
 }
 .logo img {
-	width: 200px;
+	width: 80px;
 }
+
 .t-slider-content p {
 	width: 80%;
 	margin: 0 auto 35px;
@@ -361,6 +377,10 @@ blockquote.classic-blockquote-post::after {
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+	.icon-size{
+		width: 11%;
+		padding-bottom: 24px;
+	}
 .addbtn-alignment {
 	text-align: center;
 	padding-right: 0px;
@@ -409,7 +429,7 @@ blockquote.classic-blockquote-post::after {
     font-size: 1px;
     font-weight: 700;
     height: 22px;
-    line-height: 55px;
+    line-height:23px;
     margin-top: -46px;
     padding: 8px 9px;
     position: absolute;
@@ -724,7 +744,12 @@ blockquote.blockquote-post::before {
 
 
 /* small mobile :320px. */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+	
+.padding40 {
+	padding: 21px;
+	margin: 32px;
+}
 .item-aligns{
 	text-align: start;
 }
@@ -1353,6 +1378,10 @@ blockquote::before {
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+	.icon-size{
+		width: 11%;
+		padding-bottom: 24px;
+	}
 
 .blog-classic-post .blog-content {
 	padding: 0;
@@ -1553,6 +1582,10 @@ blockquote.classic-blockquote-post::after {
 
 }
 @media only screen and (min-width: 320px) and (max-width: 575px) {
+	.icon-size{
+		width: 6%;
+		padding-bottom: 24px;
+	}
 	.inputlength {
 		width: 57%;
 	}
@@ -1601,7 +1634,7 @@ blockquote.classic-blockquote-post::after {
 
 @media (max-width: 767px) {
 	.main-header {
-		padding: 25px 0 10px;
+		padding: 5px 0 0px;
 		background: #fff;
 	}
 }

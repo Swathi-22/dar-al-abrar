@@ -4983,7 +4983,7 @@ blockquote.classic-blockquote-post::after {
 	color: #060706 !important;
 }
 .logo-size{
-	width: 25%;
+	width: 20%;
 }
 .item-aligns{
 	text-align: center;
@@ -5137,4 +5137,13 @@ figure figcaption h2 {
 .order-track {
 	transition: all 0.3s height 0.3s;
 	transform-origin: top center;
+}
+
+
+.section-padding{
+	padding: 25px 0px;
+}
+.icon-size{
+	width: 11%;
+    padding-bottom: 24px;
 }

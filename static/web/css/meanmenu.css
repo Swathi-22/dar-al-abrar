@@ -59,6 +59,7 @@ a.meanmenu-reveal {
 	margin: 0;
 	width: 100%;
 	list-style-type: none;
+	
 }
 
 .mean-container .mean-nav ul li {
@@ -167,3 +168,6 @@ a.meanmenu-reveal {
 	display: none !important;
 }
 
+.test1{
+	margin-top: -44px !important;
+}
