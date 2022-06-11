@@ -1250,7 +1250,7 @@ label {
 .slider-bg {
 	background-image: url(../img/slider/silder.io.jpg);
 	position: relative;
-	min-height: 749px;
+	min-height: 500px;
 	background-position: center;
 	background-size: cover;
 	z-index: 2;
@@ -2250,6 +2250,7 @@ label {
 	margin-bottom: 20px;
 }
 .services-content p {
+	text-align: justify;
 	margin-bottom: 0;
 }
 .services-content::before {
@@ -3380,6 +3381,7 @@ label {
 	color: #1b6672;
 }
 .fact-content h4 {
+	text-align: center;
 	font-size: 36px;
 	font-weight: 500;
 	line-height: 1;
@@ -3387,12 +3389,14 @@ label {
 	color: #060706	;
 }
 .fact-content h6 {
+	text-align: center;
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
 .fact-content p {
 	margin-bottom: 0;
+	text-align: center;
 }
 .fact-bg {
 	background-image: url(../img/bg/fact_bg.jpg);
@@ -3420,6 +3424,7 @@ label {
 	color: #414040;
 }
 .extra-features-content p {
+	text-align: justify;
 	margin-bottom: 35px;
 }
 
@@ -5144,6 +5149,13 @@ figure figcaption h2 {
 	padding: 25px 0px;
 }
 .icon-size{
-	width: 11%;
+	width: 28px;
     padding-bottom: 24px;
+	
+}
+.align-km{
+	text-align: center;
+}
+.slider-width{
+	width: 100% !important;
 }

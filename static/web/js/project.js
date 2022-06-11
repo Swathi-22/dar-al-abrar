@@ -51,7 +51,7 @@ $('#country').change(function(){
 
 
 
-$('#quantity').change(function(){
+$('#quantity').keyup(function(){
     
     var quantity=$(this).val()
     var price=$("#productprice").val()

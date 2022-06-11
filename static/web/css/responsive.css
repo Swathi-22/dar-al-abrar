@@ -65,7 +65,7 @@
 	padding-top: 370px;
 }
 .breadcrumb-bg {
-	min-height: 640px;
+	min-height:  435px;
 }
 .main-menu ul li .submenu li .submenu {
 	right: 100%;
@@ -78,7 +78,7 @@
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
 	.icon-size{
-		width: 11%;
+		width:24px;
 		padding-bottom: 24px;
 	}
 .padding40 {
@@ -378,13 +378,13 @@ blockquote.classic-blockquote-post::after {
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 	.icon-size{
-		width: 11%;
+		width: 25px;
 		padding-bottom: 24px;
 	}
 .addbtn-alignment {
 	text-align: center;
 	padding-right: 0px;
-	padding-top: 15px;
+	padding-top: 31px;
 }
 .add-button {
 	border: 1px solid antiquewhite;
@@ -795,7 +795,7 @@ blockquote.blockquote-post::before {
 	margin-bottom: 15px;
 }
 .slider-bg {
-	min-height: 700px;
+	min-height: 485px;
 }
 .category-list ul {
 	display: block;
@@ -900,6 +900,7 @@ blockquote.blockquote-post::before {
 	margin-top: 50px;
 }
 .extra-features-content h5 {
+	text-align: center;
 	font-size: 16px;
 }
 .newsletter-wrap {
@@ -1104,7 +1105,7 @@ blockquote.blockquote-post::before {
 	text-align: center;
 }
 .breadcrumb-bg {
-	min-height: 560px;
+	min-height: 265px;
 }
 .breadcrumb-content {
 	padding-top: 120px;
@@ -1582,8 +1583,18 @@ blockquote.classic-blockquote-post::after {
 
 }
 @media only screen and (min-width: 320px) and (max-width: 575px) {
+	.extra-features-content p {
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	.responsive-label{
+		margin-bottom: auto !important;
+
+		margin-top: 16px;
+
+	}
 	.icon-size{
-		width: 6%;
+		width: 24px;
 		padding-bottom: 24px;
 	}
 	.inputlength {
@@ -1599,7 +1610,7 @@ blockquote.classic-blockquote-post::after {
 	.addbtn-alignment {
 		text-align: center;
 		padding-right: 0px;
-		padding-top: 15px;
+		padding-top: 33px;
 	}
 	.add-button {
 		border: 1px solid antiquewhite;

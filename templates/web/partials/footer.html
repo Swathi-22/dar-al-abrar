@@ -1,18 +1,20 @@
 {% load static %}
-   
 
-   <!-- footer -->
-   <footer>
+
+<!-- footer -->
+<footer>
     <div class="footer-wrap pt-190 pb-40" data-background="{% static 'web/img/bg/footer_bg.jpg' %}">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4">
                     <div class="footer-widget mb-50">
                         <div class="footer-logo mb-35">
-                            <a href="/"><img src="{% static 'web/img/logo/dar al abrar logo.svg' %}" alt="img" width="13%"></a>
+                            <a href="/"><img src="{% static 'web/img/logo/dar al abrar logo.svg' %}" alt="img"
+                                    width="13%"></a>
                         </div>
                         <div class="footer-text">
-                            <p>Dar Al Abrar is an international exporting company based in UAE that delivers food products all over the world.
+                            <p>Dar Al Abrar is an international exporting company based in UAE that delivers food
+                                products all over the world.
                             </p>
                         </div>
                         <div class="footer-social">
@@ -63,15 +65,18 @@
                         <div class="fw-link">
                             <ul>
                                 <li><a href="{% url 'web:index' %}"><i class="fas fa-caret-right"></i> Home</a></li>
-                                <li><a href="{% url 'web:service' %}"><i class="fas fa-caret-right"></i> Services</a></li>
-                                <li><a href="{% url 'web:product' %}"><i class="fas fa-caret-right"></i> Product</a></li>
+                                <li><a href="{% url 'web:service' %}"><i class="fas fa-caret-right"></i> Services</a>
+                                </li>
+                                <li><a href="{% url 'web:product' %}"><i class="fas fa-caret-right"></i> Product</a>
+                                </li>
                                 <li><a href="{% url 'web:updates' %}"><i class="fas fa-caret-right"></i> Update</a></li>
-                                <li><a href="{% url 'web:contact' %}"><i class="fas fa-caret-right"></i> Contact</a></li>
+                                <li><a href="{% url 'web:contact' %}"><i class="fas fa-caret-right"></i> Contact</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-xl-3 col-lg-4 col-md-4">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-30">
@@ -80,13 +85,38 @@
                         <div class="f-support-content">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <img src="{% static 'web/img/phone.png' %}" alt="" class="icon-size">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-1 col-2">
+                                            <img src="{% static 'web/img/phone.png' %}" alt="" class="icon-size">
+
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-11 col-10">
+                                            <label for=""><a href="tel:+971557259069">+97 1557259069</a></label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <img src="{% static 'web/img/maps.png' %} " alt="" class="icon-size">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-1 col-2">
+                                            <img src="{% static 'web/img/maps.png' %} " alt="" class="icon-size">
+
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-11 col-10">
+                                            <label for="">demo</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <img src="{% static 'web/img/post-office.png' %}  " alt="" class="icon-size">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-1 col-2">
+                                            <img src="{% static 'web/img/post-office.png' %}  " alt=""
+                                                class="icon-size">
+
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-11 col-10">
+                                            <label for="">demo</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- <p>Download our mobile app on Google Play Store or App Store for both Android and iOS.
@@ -96,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -118,5 +148,3 @@
     </div>
 </footer>
 <!-- footer-end -->
-
-
